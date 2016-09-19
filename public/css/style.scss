@@ -4,3 +4,8 @@
 @import "./partials/_landingpage";
 @import "./partials/_questionpage";
 @import "./partials/_resultpage";
+
+body {
+  font-family: $main-font;
+  background-color: $backround-purple;
+}
