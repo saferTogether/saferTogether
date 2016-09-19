@@ -1,0 +1,22 @@
+{
+  "name": "safer-together",
+  "version": "1.0.0",
+  "description": "App to help domestic violence victims to complete a questionnaire to assess their risk",
+  "main": "index.js",
+  "scripts": {
+    "test": "-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saferTogether/saferTogether.git"
+  },
+  "author": "Sofia Pohjalainen, Bradley Reeder, Anneka Sillitoe, Mattia Spinelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saferTogether/saferTogether/issues"
+  },
+  "homepage": "https://github.com/saferTogether/saferTogether#readme",
+  "dependencies": {
+    "mprogress": "^0.1.1"
+  }
+}
