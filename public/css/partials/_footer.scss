@@ -1,8 +1,7 @@
 .footer {
   background-color: white;
-  padding: 30px;
   height: 15%;
-  margin:0px;
+  margin: 0px;
   left: 0;
   bottom: 0;
   position:fixed;
@@ -10,9 +9,16 @@
   text-align: right;
   font-family: $main-font;
   color: $dark-purple;
-  font-size: 30px;
+  p {
+    font-size: 1.2em;
+  }
+  a {
+    font-size: 1.2em;
+    color: $dark-purple;
+  }
 }
 
-.footer a {
-  color: $dark-purple;
+.footer-text {
+  margin-top: 5px;
+  margin-right: 5px;
 }
