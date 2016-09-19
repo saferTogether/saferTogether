@@ -1,0 +1,18 @@
+.footer {
+  background-color: white;
+  padding: 30px;
+  height: 15%;
+  margin:0px;
+  left: 0;
+  bottom: 0;
+  position:fixed;
+  width: 100%;
+  text-align: right;
+  font-family: $main-font;
+  color: $dark-purple;
+  font-size: 30px;
+}
+
+.footer a {
+  color: $dark-purple;
+}
