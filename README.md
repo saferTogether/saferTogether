@@ -12,7 +12,7 @@ As many as 1 in 4 women are affected by domestic violence in the UK. This app sh
 
 ### How?
 
-The initial design prototype will focus 
+The initial prototype will focus on creating the survey and risk assessment page using Sass, Greensock and Slick.
 
 Future iterations will focus on making the app downloadable from Safer Together's website and creating a database that stores the survey results and makes them accessible to Safer Together.
 
