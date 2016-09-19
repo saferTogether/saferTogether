@@ -18,8 +18,28 @@
 }
 
 .question {
-  border: 1px solid red;
-  margin-top: 10%;
+  padding: 20px;
+  height: 30%;
+  width: 100%;
+  margin-top: 5%;
   text-align: center;
+  font-size: 1.5em;
+}
 
+.underline {
+  margin-top: 10%;
+  width: 100%;
+  border-bottom: 1px solid $dark-purple;
+}
+
+#yellow {
+  background-color: $accent-yellow!important;
+  margin-top: 55%;
+  margin-left: 30px;
+}
+
+#purple {
+  background-color: $dark-purple!important;
+  margin-top: 55%;
+  margin-right: 30px;
 }
