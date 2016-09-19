@@ -1,7 +1,6 @@
 .footer {
   background-color: white;
   height: 15%;
-  margin: 0px;
   left: 0;
   bottom: 0;
   position:fixed;
@@ -9,16 +8,13 @@
   text-align: right;
   font-family: $main-font;
   color: $dark-purple;
-  p {
-    font-size: 1.2em;
-  }
   a {
-    font-size: 1.2em;
+    font-size: 1em;
     color: $dark-purple;
   }
 }
 
 .footer-text {
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
