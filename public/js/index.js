@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.question-carousel').slick({
+    infinite: false,
     accessibility: true,
     adaptiveHeight: true,
     arrows: true,
