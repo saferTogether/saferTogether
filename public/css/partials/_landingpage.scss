@@ -1,21 +1,21 @@
 .welcome-text {
-  margin-top: 250px;
-  text-align:center;
-  margin-left:auto;
-  margin-right: auto;
-  padding-top: 200px;
-  position: fixed;
+  text-align: center;
+  margin-top: 200px;
+  width: 100%;
 }
 
 .welcome {
-  font-size: 40px;
+  font-size: 30px;
+  padding: 3%;
+  padding-bottom: 20px;
   text-align: center;
   font-family: $main-font;
   color: white;
 }
 
 .privacy {
-  font-size: 28px;
+  font-size: 20px;
+  padding: 3%;
   text-align: center;
   font-family: $main-font;
   color: white;
