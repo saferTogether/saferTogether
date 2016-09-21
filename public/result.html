@@ -28,6 +28,7 @@
 
       <ul class="collapsible" data-collapsible="accordion">
       <li>
+
         <div class="collapsible-header active"><i class="material-icons">forward</i>What to do next</div>
         <div class="collapsible-body">
           <p>If you answered yes to any of these questions, you could be at risk of domestic violence.</p>
@@ -45,6 +46,33 @@
           <p>If you need further guidance, support, or are planning on leaving your partner and need safety advice we would love to help you.</p>
           <p>Please submit the form below and your details will be sent to us along with your results from the survey.</p>
           <p class="bottom-text">We will not contact you unless you would like us to, in which case please specify how you would like to be contacted and a time that is convenient.</p>
+          <div class="row">
+          <form class="col s12">
+          <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label class="active" for="icon_prefix">Full Name</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label class="active" for="icon_telephone">Telephone</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate">
+            <label class="active" for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">comment</i>
+            <textarea placeholder="Please specify how you would like to be contacted here" id="textarea1" class="materialize-textarea"></textarea>
+            <label class="active" for="textarea1">Comment</label>
+          </div>
+        </div>
+        <a id="form-button" class="waves-effect waves-light btn">Submit</a>
+      </form>
+    </div>
         </div>
       </li>
       <li>
@@ -72,7 +100,16 @@
       <li>
         <div class="collapsible-header"><i class="material-icons">lock</i>Keeping safe</div>
         <div class="collapsible-body">
-          <p>hai thar</p>
+          <p>For detailed safety planning and advice please get in contact with us or consult our full guide <a href="https://docs.google.com/document/d/1E67q0xdUP-4ZjqRDYH5cjW0icinBKtbNv-EbS9fpFPQ/pub" target="_blank">here.</a></p>
+          <h5>Registering with 999</h5>
+          <p>You can register 999 on your phone so you can text 999 in an emergency instead of calling. This might be a safer way to contact the police, ambulance or fire during an emergency if violence is happening at home.</p>
+          <p>To register, text ‘register’ to 999. You will get a reply – then follow the instructions you’re sent.</p>
+          <p>In an emergency Text 999. In the text message write:</p>
+          <p>Who? Police, Fire, Ambulance</p>
+          <p>What? Briefly, what is the problem?</p>
+          <p>Where? Exactly where the problem is happening – give the name of the road, house number, postcode or nearby landmark if possible.</p>
+          <h5>What happens next?</h5>
+          <p class="bottom-text">The emergency service will either ask for more information or will tell you that help is on the way. Don’t assume that your message has been received until the emergency service sends a message back. It will usually take about 2 minutes before you get a reply. If you don’t get a reply within 3 minutes, please try again or find other ways of getting help.</p>
         </div>
       </li>
       </ul>
@@ -95,7 +132,7 @@
     <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="./Remodal-1.1.0/src/remodal.js" charset="utf-8"></script>
-    <!-- <script src="./js/mprogress.min.js" charset="utf-8"></script> -->
+    <script src="./js/mprogress.min.js" charset="utf-8"></script>
     <script src="./js/index.js" charset="utf-8"></script>
     <script src="./js/globals.js" charset="utf-8"></script>
   </body>
