@@ -1,3 +1,25 @@
+@media only screen and (max-width: 320px) {
+  #escape {
+    font-size: 0.8em;
+  }
+  #start {
+    margin-top: 8% !important;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  #start {
+    margin-top: 6% !important;
+  }
+}
+
+@media only screen and (min-width: 412px) {
+  #start {
+    margin-top: 4% !important;
+  }
+}
+
 #escape {
   float: right;
   margin-top: 5vh;
@@ -14,14 +36,4 @@
   font-size: 1.5em;
   height: 0%;
   text-align: center;
-}
-
-@media only screen and (max-width: 320px) {
-  #escape {
-    font-size: 0.8em;
-  }
-  #start {
-    margin-top: 4%;
-    font-size: 1.2em;
-  }
 }
