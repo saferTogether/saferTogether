@@ -1,14 +1,14 @@
 @mixin privacy {
-    font-size: 1em;
-    padding: 0 4%;
-    text-align: center;
-    font-family: $main-font;
-    color: white;
+  font-size: 1em;
+  padding: 0 4%;
+  text-align: center;
+  font-family: $main-font;
+  color: white;
 }
 
 .welcome-text {
   text-align: center;
-  margin-top: 25vh;
+  margin-top: 17vh;
   width: 100%;
 }
 
@@ -30,6 +30,27 @@
 .privacy-3 {
   @include privacy;
   margin-top: 2%;
+}
+
+@media only screen and (min-width: 360px) {
+  .privacy-1, .privacy-2, .privacy-3  {
+    font-size: 1.2em;
+  }
+  .privacy-2, .privacy-3 {
+    margin-top: 3%;
+  }
+  .welcome.text {
+    margin-top: 15vh;
+  }
+}
+
+@media only screen and (min-width: 412px) {
+  .privacy-1, .privacy-2, .privacy-3 {
+    font-size: 1.35em;
+  }
+  .privacy-2, .privacy-3 {
+    margin-top: 4%;
+  }
 }
 
 @media only screen and (max-width: 320px) {
