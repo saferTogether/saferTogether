@@ -9,6 +9,9 @@ $(document).ready(function(){
     mobileFirst: true,
     swipe: true
   });
+  $('.collapsible').collapsible({
+      accordion : true
+  });
 });
 
 /////////////////////////////////////////////////////
@@ -55,5 +58,3 @@ noButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).clos
 yesButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
 
 //////////////////////////
-
-
