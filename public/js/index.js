@@ -10,11 +10,12 @@ $(document).ready(function(){
     swipe: true
   });
   $('.collapsible').collapsible({
-      accordion : true
+      accordion: true
   });
 });
 
 /////////////////////////////////////////////////////
+
 var body = document.getElementsByTagName("body")[0];
 body.addEventListener("load", function(){
   replies = []
@@ -24,6 +25,7 @@ body.addEventListener("load", function(){
 $.each($('.question'), (key,value) => {
   $(value.children).wrapAll( "<div class='buttonWrapper' id="+key+" />")
 });
+
 ////////////////////////////////////////////////////
 
 var mprogress = new Mprogress({
@@ -56,5 +58,18 @@ var noButton = Array.from(document.getElementsByClassName('no-button'));
 var yesButton = Array.from(document.getElementsByClassName('yes-button'));
 noButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
 yesButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
+
+//////////////////////////
+
+var footer = document.getElementsByClassName('footer')[0];
+var collapsibleHeader = Array.from(document.getElementsByClassName('collapsible-header'));
+
+function toggleFooter(e) {
+  if (e.target.className === 'collapsible-header active') {
+    footer.style.display = 'block';
+  } else { footer.style.display = 'none'; }
+}
+
+collapsibleHeader.map((el) => el.addEventListener('click', toggleFooter));
 
 //////////////////////////
