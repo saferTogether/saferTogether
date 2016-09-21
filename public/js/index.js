@@ -10,20 +10,19 @@ $(document).ready(function(){
     swipe: true
   });
 });
+
 /////////////////////////////////////////////////////
 var body = document.getElementsByTagName("body")[0];
 body.addEventListener("load", function(){
   replies = []
-
 }, false);
 
 
 $.each($('.question'), (key,value) => {
   $(value.children).wrapAll( "<div class='buttonWrapper' id="+key+" />")
 });
-
-
 ////////////////////////////////////////////////////
+
 var mprogress = new Mprogress({
   parent: '.progress-bar'
 });
@@ -38,11 +37,13 @@ function progress(){
     $('.slick-next').click()
   } else if (replies.indexOf(arguments[0])=== -1 && openQ.indexOf(Number(arguments[0]))!== -1){
     inst.open()
-    $('remodal-confirm').click(()=>{
+    $(document).on('confirmation', '.remodal', function () {
+      console.log('Confirmation button is clicked');
       replies.push(arguments[0])
       mprogress.inc(0.041)
       $('.slick-next').click()
-    })
+
+    });
   }
   else{alert('you have already answered')}
 
@@ -54,6 +55,5 @@ noButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).clos
 yesButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
 
 //////////////////////////
-
 
 
