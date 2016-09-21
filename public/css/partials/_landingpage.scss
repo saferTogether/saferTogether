@@ -1,22 +1,36 @@
+@mixin privacy {
+    font-size: 1em;
+    padding: 0 4%;
+    text-align: center;
+    font-family: $main-font;
+    color: white;
+}
+
 .welcome-text {
-  margin-top: 250px;
-  text-align:center;
-  margin-left:auto;
-  margin-right: auto;
-  padding-top: 200px;
-  position: fixed;
+  text-align: center;
+  margin-top: 25vh;
+  width: 100%;
 }
 
 .welcome {
-  font-size: 40px;
+  font-size: 2em;
+  padding: 0 4%;
+  padding-bottom: 5%;
   text-align: center;
   font-family: $main-font;
   color: white;
 }
 
-.privacy {
-  font-size: 28px;
-  text-align: center;
-  font-family: $main-font;
-  color: white;
+.privacy-1 {
+  @include privacy;
+}
+
+.privacy-2 {
+  @include privacy;
+  margin-top: 2%;
+}
+
+.privacy-3 {
+  @include privacy;
+  margin-top: 2%;
 }
