@@ -10,8 +10,18 @@
 #start {
   background-color: #380C2A;
   margin-top: 10%;
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: $main-font;
   font-size: 1.5em;
   height: 0%;
   text-align: center;
+}
+
+@media only screen and (max-width: 320px) {
+  #escape {
+    font-size: 0.8em;
+  }
+  #start {
+    margin-top: 4%;
+    font-size: 1.2em;
+  }
 }

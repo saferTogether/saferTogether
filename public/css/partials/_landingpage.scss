@@ -13,12 +13,9 @@
 }
 
 .welcome {
+  @include privacy;
   font-size: 2em;
-  padding: 0 4%;
   padding-bottom: 5%;
-  text-align: center;
-  font-family: $main-font;
-  color: white;
 }
 
 .privacy-1 {
@@ -33,4 +30,33 @@
 .privacy-3 {
   @include privacy;
   margin-top: 2%;
+}
+
+@media only screen and (max-width: 320px) {
+  .welcome-text {
+    margin-top: 17vh;
+  }
+
+  .welcome {
+    @include privacy;
+    font-size: 1.8em;
+    padding-bottom: 5%;
+  }
+
+  .privacy-1 {
+    @include privacy;
+    font-size: 1em;
+  }
+
+  .privacy-2 {
+    @include privacy;
+    font-size: 1em;
+    margin-top: 2%;
+  }
+
+  .privacy-3 {
+    @include privacy;
+    font-size: 1em;
+    margin-top: 2%;
+  }
 }
