@@ -14,6 +14,18 @@
   margin-top: 15vh;
 }
 
+.material-icons {
+  color: white;
+}
+
+#icon-prefix {
+  color: white;
+}
+
+
+.validate {
+  color: white;
+}
 .collapsible-body {
   li {
     color: white;
@@ -32,4 +44,9 @@
 
 #form-button {
   margin-left: 33vw !important;
+  background-color: $dark-purple!important;
+}
+
+.materialize-textarea {
+  color: white;
 }
