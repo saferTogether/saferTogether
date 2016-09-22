@@ -62,12 +62,28 @@ function progress(){
 };
 
 function questionAnswered(e) {
-  if (e.target.parentElement.className === "yellow-button yes-button unanswered") {
+  if (e.target.parentElement.className === "yellow-button yes-button unanswered"
+    && e.target.parentElement.previousSibling.className === "purple-button no-button answered") {
+    e.target.textContent = "beenhere";
+    e.target.parentElement.previousSibling.firstChild.textContent = "clear";
+    e.target.parentElement.className = "yellow-button yes-button answered";
+    e.target.parentElement.previousSibling.className = "purple-button no-button unanswered";
+    yesCounter++;
+  } else if (e.target.parentElement.className === "purple-button no-button unanswered"
+    && e.target.parentElement.nextSibling.className === "yellow-button yes-button answered") {
+    e.target.textContent = "beenhere";
+    e.target.parentElement.nextSibling.firstChild.textContent = "done";
+    e.target.parentElement.className = "purple-button no-button answered";
+    e.target.parentElement.nextSibling.className = "yellow-button yes-button unanswered";
+    yesCounter--;
+  } else if (e.target.parentElement.className === "purple-button no-button unanswered") {
+    e.target.textContent = "beenhere";
+    e.target.parentElement.className = "purple-button no-button answered";
+  } else if (e.target.parentElement.className === "yellow-button yes-button unanswered") {
+    e.target.textContent = "beenhere";
     e.target.parentElement.className = "yellow-button yes-button answered";
     yesCounter++;
-  } else if (e.target.parentElement.className === "purple-button no-button unanswered") {
-    e.target.parentElement.className = "purple-button no-button answered";
-  }
+  } console.log(yesCounter);
 }
 
 var noButton = Array.from(document.getElementsByClassName('no-button'));
