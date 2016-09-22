@@ -44,16 +44,14 @@ function progress(){
   let pos = arguments[0]
   console.log('inside progres', arguments[0])
   var inst = $('[data-remodal-id=modal]').remodal();
+  mprogress.inc(0.041)
   if(replies.indexOf(pos)=== -1 && openQ.indexOf(Number(pos))=== -1){
     replies.push(arguments[0])
-    mprogress.inc(0.041)
-
     $('.question-carousel').slick('slickNext')
   } else if (replies.indexOf(pos) === -1 && openQ.indexOf(Number(pos)) !== -1){
     inst.open()
     $(document).on('confirmation', '.remodal', function () {
       replies.push(pos)
-      mprogress.inc(0.041)
       $('.question-carousel').slick('slickNext')
     });
   }
