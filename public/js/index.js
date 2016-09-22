@@ -57,7 +57,7 @@ function progress(){
       $('.question-carousel').slick('slickNext')
     });
   }
-  else{alert('you have already answered')}
+  else{ alert('you have already answered'); mprogress.inc(-0.041) }
 
 };
 
