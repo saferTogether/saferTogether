@@ -1,3 +1,5 @@
+// control transitions between pages
+
 var startButton = document.getElementById('start');
 var startPage = document.getElementsByClassName('welcome-text')[0];
 var surveyPage = document.getElementsByClassName('survey-page')[0];
