@@ -116,3 +116,14 @@ function clearTextarea() {
 }
 
 modalSubmitButton.addEventListener('click', clearTextarea);
+
+// Reveal the results (number of yes's at end of quiz)
+
+var finishSurvey = document.getElementById('finish-survey');
+var resultsText = document.getElementsByClassName('survey-results')[0];
+
+function showResults() {
+  resultsText.textContent = "Thank you for completing the survey. You responded yes to " + yesCounter + " questions.";
+}
+
+finishSurvey.addEventListener('click', showResults);
