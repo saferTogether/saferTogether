@@ -80,6 +80,13 @@ function toggleFooter(e) {
 collapsibleHeader.map((el) => el.addEventListener('click', toggleFooter));
 
 
+// Submit box
 
+var modalSubmitButton = document.getElementsByClassName('remodal-confirm')[0];
+var modalTextarea = document.getElementsByClassName('modal-textarea')[0];
 
+function clearTextarea() {
+  modalTextarea.value = '';
+}
 
+modalSubmitButton.addEventListener('click', clearTextarea);
