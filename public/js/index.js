@@ -4,16 +4,23 @@ $(document).ready(function(){
     accessibility: true,
     adaptiveHeight: true,
     arrows: true,
-    draggable: true,
+    draggable: false,
     fade: true,
     mobileFirst: true,
     swipe: true
   });
   $('.collapsible').collapsible({
-      accordion: true
+    accordion: true
   });
-});
-
+  $('.slick-next').off()
+  $('.slick-next').click(function(){
+    console.log('current',$('.question-carousel').slick('slickCurrentSlide'))
+    if((replies.indexOf(String($('.question-carousel').slick('slickCurrentSlide')))!= -1)){
+      console.log('condition was met')
+      $('.question-carousel').slick('slickNext')
+    }
+  })
+})
 /////////////////////////////////////////////////////
 
 var body = document.getElementsByTagName("body")[0];
@@ -23,7 +30,7 @@ body.addEventListener("load", function(){
 
 
 $.each($('.question'), (key,value) => {
-  $(value.children).wrapAll( "<div class='buttonWrapper' id="+key+" />")
+  $(value.children).wrapAll( "<div class='buttonWrapper' id="+ key +" />")
 });
 
 ////////////////////////////////////////////////////
@@ -31,23 +38,23 @@ $.each($('.question'), (key,value) => {
 var mprogress = new Mprogress({
   parent: '.progress-bar'
 });
-
 mprogress.set(0.04);
 
 function progress(){
+  let pos = arguments[0]
+  console.log('inside progres', arguments[0])
   var inst = $('[data-remodal-id=modal]').remodal();
-  if(replies.indexOf(arguments[0])=== -1 && openQ.indexOf(Number(arguments[0]))=== -1){
+  if(replies.indexOf(pos)=== -1 && openQ.indexOf(Number(pos))=== -1){
     replies.push(arguments[0])
     mprogress.inc(0.041)
-    $('.slick-next').click()
-  } else if (replies.indexOf(arguments[0])=== -1 && openQ.indexOf(Number(arguments[0]))!== -1){
+
+    $('.question-carousel').slick('slickNext')
+  } else if (replies.indexOf(pos) === -1 && openQ.indexOf(Number(pos)) !== -1){
     inst.open()
     $(document).on('confirmation', '.remodal', function () {
-      console.log('Confirmation button is clicked');
-      replies.push(arguments[0])
+      replies.push(pos)
       mprogress.inc(0.041)
-      $('.slick-next').click()
-
+      $('.question-carousel').slick('slickNext')
     });
   }
   else{alert('you have already answered')}
@@ -72,4 +79,7 @@ function toggleFooter(e) {
 
 collapsibleHeader.map((el) => el.addEventListener('click', toggleFooter));
 
-//////////////////////////
+
+
+
+
