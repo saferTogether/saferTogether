@@ -38,7 +38,7 @@ $.each($('.question'), (key,value) => {
 var mprogress = new Mprogress({
   parent: '.progress-bar'
 });
-mprogress.set(0.04);
+mprogress.set(0.4);
 
 function progress(){
   let pos = arguments[0]
@@ -46,14 +46,14 @@ function progress(){
   var inst = $('[data-remodal-id=modal]').remodal();
   if(replies.indexOf(pos)=== -1 && openQ.indexOf(Number(pos))=== -1){
     replies.push(arguments[0])
-    mprogress.inc(0.041)
+    // mprogress.inc(0.004)
 
     $('.question-carousel').slick('slickNext')
   } else if (replies.indexOf(pos) === -1 && openQ.indexOf(Number(pos)) !== -1){
     inst.open()
     $(document).on('confirmation', '.remodal', function () {
       replies.push(pos)
-      mprogress.inc(0.041)
+      mprogress.inc(0.04)
       $('.question-carousel').slick('slickNext')
     });
   }
