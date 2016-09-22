@@ -103,7 +103,10 @@
   font-size: 0.5em;
   color: $dark-purple;
   text-align: center;
+}
 
+.answered {
+  background-color: red !important;
 }
 
 .modal-header {

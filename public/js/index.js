@@ -4,7 +4,7 @@ $(document).ready(function(){
     accessibility: true,
     adaptiveHeight: true,
     arrows: true,
-    draggable: false,
+    draggable: true,
     fade: true,
     mobileFirst: true,
     swipe: true
@@ -21,6 +21,7 @@ $(document).ready(function(){
     }
   })
 })
+
 /////////////////////////////////////////////////////
 
 var body = document.getElementsByTagName("body")[0];
@@ -33,8 +34,9 @@ $.each($('.question'), (key,value) => {
   $(value.children).wrapAll( "<div class='buttonWrapper' id="+ key +" />")
 });
 
-////////////////////////////////////////////////////
+// On clicking yes or no
 
+var yesCounter = 0;
 var mprogress = new Mprogress({
   parent: '.progress-bar'
 });
@@ -59,12 +61,23 @@ function progress(){
 
 };
 
+function questionAnswered(e) {
+  if (e.target.parentElement.className === "yellow-button yes-button unanswered") {
+    e.target.parentElement.className = "yellow-button yes-button answered";
+    yesCounter++;
+  } else if (e.target.parentElement.className === "purple-button no-button unanswered") {
+    e.target.parentElement.className = "purple-button no-button answered";
+  }
+}
+
 var noButton = Array.from(document.getElementsByClassName('no-button'));
 var yesButton = Array.from(document.getElementsByClassName('yes-button'));
 noButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
+noButton.map((el) => el.addEventListener('click', questionAnswered));
 yesButton.map((el) => el.addEventListener('click', progress.bind(null, $(el).closest("div").prop("id"))));
+yesButton.map((el) => el.addEventListener('click', questionAnswered));
 
-//////////////////////////
+// toggle footer on results page
 
 var footer = document.getElementsByClassName('footer')[0];
 var collapsibleHeader = Array.from(document.getElementsByClassName('collapsible-header'));
@@ -76,7 +89,6 @@ function toggleFooter(e) {
 }
 
 collapsibleHeader.map((el) => el.addEventListener('click', toggleFooter));
-
 
 // Submit box
 
