@@ -1,9 +1,10 @@
 .survey-page {
   display: flex;
+  visibility: hidden;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 0vh;
   width: 100vw;
 }
 
