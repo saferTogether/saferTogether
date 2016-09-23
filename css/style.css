@@ -111,6 +111,7 @@ table {
   margin-top: 5%; }
 
 .welcome-text {
+  overflow: hidden;
   text-align: center;
   margin-top: 17vh;
   width: 100%; }
@@ -201,6 +202,7 @@ table {
     font-size: 1em;
     margin-top: 2%; } }
 .survey-page {
+  overflow hidden;
   display: flex;
   visibility: hidden;
   justify-content: center;
@@ -345,7 +347,6 @@ table {
 body {
   font-family: "Hind Siliguri", sans-serif;
   background-color: #5F3350;
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
