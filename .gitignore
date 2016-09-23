@@ -38,8 +38,6 @@ jspm_packages
 
 #Sass and css for before build
 
-style.css
-
 .sass-cache
 
 style.css.map
