@@ -11,5 +11,11 @@ function togglePages(current, next, display) {
   next.style.display = display;
 }
 
-startButton.addEventListener('click', () => { togglePages(startPage, surveyPage, 'flex') });
+function startSurvey() {
+  startPage.style.display = "none";
+  surveyPage.style.height = "100vh";
+  surveyPage.style.visibility = "visible";
+}
+
+startButton.addEventListener('click', () => { startSurvey() });
 finishSurvey.addEventListener('click', () => { togglePages(surveyPage, resultsPage, 'inline-block')});
