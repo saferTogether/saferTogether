@@ -111,6 +111,7 @@ table {
   margin-top: 5%; }
 
 .welcome-text {
+  overflow: hidden;
   text-align: center;
   margin-top: 17vh;
   width: 100%; }
@@ -203,6 +204,7 @@ table {
 .survey-page {
   display: flex;
   visibility: hidden;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   flex-direction: column;
