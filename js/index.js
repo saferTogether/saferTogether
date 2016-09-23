@@ -71,13 +71,13 @@ function questionAnswered(e) {
     yesCounter++;
   } else if (e.target.parentElement.className === "purple-button no-button unanswered"
     && e.target.parentElement.nextSibling.className === "yellow-button yes-button answered") {
-    e.target.textContent = "beenhere";
+    e.target.textContent = "cancel";
     e.target.parentElement.nextSibling.firstChild.textContent = "done";
     e.target.parentElement.className = "purple-button no-button answered";
     e.target.parentElement.nextSibling.className = "yellow-button yes-button unanswered";
     yesCounter--;
   } else if (e.target.parentElement.className === "purple-button no-button unanswered") {
-    e.target.textContent = "beenhere";
+    e.target.textContent = "cancel";
     e.target.parentElement.className = "purple-button no-button answered";
   } else if (e.target.parentElement.className === "yellow-button yes-button unanswered") {
     e.target.textContent = "beenhere";
